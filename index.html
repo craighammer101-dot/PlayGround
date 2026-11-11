@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hatch to Keep</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Lemmings Rescue</p>
+          <h1>Hatch to Keep</h1>
+        </div>
+        <div class="stats" aria-live="polite">
+          <div class="stat"><span>Level</span><strong id="levelLabel">1</strong></div>
+          <div class="stat"><span>Saved</span><strong id="savedLabel">0</strong></div>
+          <div class="stat"><span>Target</span><strong id="targetLabel">0</strong></div>
+          <div class="stat"><span>Builds</span><strong id="buildLabel">0</strong></div>
+        </div>
+      </header>
+
+      <div class="toolbar">
+        <button id="buildBtn" class="tool active" data-tool="build">Bridge</button>
+        <button id="removeBtn" class="tool" data-tool="remove">Remove</button>
+        <button id="startBtn" class="primary">Start swarm</button>
+        <button id="resetBtn">Reset</button>
+        <button id="nextBtn">Next level</button>
+      </div>
+
+      <canvas id="gameCanvas" width="960" height="544" aria-label="Lemmings rescue game"></canvas>
+
+      <div id="message" class="message" aria-live="polite">
+        Bridge the gaps. Keep the swarm alive and guide them to the castle.
+      </div>
+    </div>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
